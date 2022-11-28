@@ -1,3 +1,3 @@
-# Seção 02- Unix & Shell - Parte 02
+# Seção 02- Git e GitHub -
 
-Esse bloco pertence ao módulo de `fundamentos` do curso da [Trybe](https://www.betrybe.com/). Nesse bloco aprendi a executar uma sérioe de comandos como o find, os operadores >, >> e |. Aprendi também a visualizar e alterar as permissões de arquivos e diretórios, também vi como verificar o status e enviar sinais a processos UNIX.
+Esse bloco pertence ao módulo de `fundamentos` do curso da [Trybe](https://www.betrybe.com/). Nesse bloco aprendemos a instalar e configurar o Git no seu computador, salvar seus projetos no repositório Git local, controlar as alterações e versões dos seus arquivos, copiar um repositório já existente no GitHub para o seu computador, abrir Pull Requests, subir seu repositório local para o GitHub, enviar seus projetos para o repositório remoto do GitHub e trabalhar em um mesmo projeto, com mais de uma pessoa, de forma assíncrona e distribuída.
