@@ -1,0 +1,1 @@
+const grade = 58;
