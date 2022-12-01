@@ -7,4 +7,6 @@ let birthYear = 1991;
 //console.log(birthYear);
 
 birthYear = 2030;
-console.log(birthYear);
+//console.log(birthYear);
+birthCity = "BH"
+console.log(birthCity);
