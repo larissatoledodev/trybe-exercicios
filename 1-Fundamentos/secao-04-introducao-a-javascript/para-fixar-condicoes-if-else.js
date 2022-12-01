@@ -1,4 +1,4 @@
-const grade = 58;
+const grade = 80;
 
 if (grade >= 80) {
     console.log("Parabéns, você faz parte do grupo das pessoas aprovadas!");
