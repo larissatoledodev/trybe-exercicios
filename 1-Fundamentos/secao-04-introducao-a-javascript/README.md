@@ -30,7 +30,9 @@ Altere o valor da nota para verificar se as condições que você implementou fu
 
 ## Para fixar Operadores Lógicos
 
-Crie uma constante chamada “currentHour”, que receba um número entre 4 e 24 de sua escolha, para representar as horas do dia.
+# Operador AND
+
+1 - Crie uma constante chamada “currentHour”, que receba um número entre 4 e 24 de sua escolha, para representar as horas do dia.
 
 Crie uma variável chamada “message” que, inicialmente, é uma string vazia.
 
@@ -47,3 +49,15 @@ Se o horário for maior ou igual a 11 e menor que 14, insira “Hora do almoço!
 Se o horário estiver entre 4 e 11, insira “Hmmm, cheiro de café recém-passado” na variável “message”.
 
 Agora imprima a variável message fora das suas condições.
+
+# Operador OR
+
+2 - Crie uma variável chamada “weekDay” que receba a string “quarta-feira”.
+
+Utilizando if/else, implemente condicionais para que:
+
+Se nossa variável “weekDay” for “segunda-feira”, “terça-feira”, “quarta-feira”, “quinta-feira” ou “sexta-feira”, imprima “Oba, mais um dia de aprendizado na Trybe >:D”.
+
+Se for algum dia de fim de semana, imprima “FINALMENTE, descanso merecido UwU”.
+
+Experimente trocar o valor da string ou até mesmo montar seu próprio algoritmo. Esse assunto é muito importante para seu aprendizado :).
