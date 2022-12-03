@@ -62,3 +62,8 @@ O código deve retornar uma mensagem de erro e encerrar se a nota passada for me
 # exercício 01
 
 Utilize if/else para escrever um código que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele deve retornar false.
+
+# exercício 02
+
+Utilize if/else para escrever um código que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele deve retornar false.
+Bonus: use somente um if.
