@@ -3,7 +3,12 @@
 
 //console.log(menuServices);
 
-let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-let indexOfPortifolio = menu.indexOf('Portfólio');
+//let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
+//let indexOfPortifolio = menu.indexOf('Portfólio');
 
-console.log(indexOfPortifolio);
+//console.log(indexOfPortifolio);
+
+let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
+menu.push('Contato');
+
+console.log(menu);
