@@ -1,231 +1,194 @@
-## Exercícios - objetos e for/in
+## Exercícios
 
-Usando o objeto abaixo, faça os exercícios a seguir:
+# Parte I
+🚀 Altere o tipo das variáveis (var) para let ou const para que respeitem o escopo em que foram declaradas.
 
-let info = {
-  personagem: 'Margarida',
-  origem: 'Pato Donald',
-  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-};
+01 - Modifique a variável para que respeite o escopo onde está sendo declarada. Lembre-se: para que a variável respeite o escopo, ela não deve ser acessível fora do escopo em que esteja sendo declarada.
 
-01 - Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome. Use a sintaxe meuObjeto.chave. Valor esperado no console:
+Copie o código abaixo e rode-o para verificar sua saída:
 
-Bem-vinda, Margarida
-
-02 - Insira no objeto uma nova propriedade com o nome de chave ‘recorrente’ e o valor ‘Sim’ e, em seguida, imprima o objeto no console. Use a sintaxe meuObjeto['chave'] = valor. Valor esperado no console:
-
-{
-  personagem: 'Margarida',
-  origem: 'Pato Donald',
-  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-  recorrente: 'Sim'
+function imprimeIdade() {
+  for (var idade = 30; idade <= 40; idade += 1) {
+    console.log('Idade dentro do for:', idade)
+  }
+  console.log('Idade fora do for:', idade) // retire essa linha ao implementar o tipo de variável correta.
 }
+imprimeIdade()
 
-03 - Faça um for/in que mostre todas as chaves do objeto. Valor esperado no console:
+02 - Altere o valor das propriedades do objeto, para que respeite as características da variável do tipo const;
 
-personagem
-origem
-nota
-recorrente
+  // Executando esse código iremos receber um erro `TypeError: Assignment to constant variable.`
+  const pessoa = {
+    nome: 'Henri',
+    idade: 20
+  }
+  pessoa = {
+    nome: 'Luna',
+    idade: 19
+  } // Altere essa estrutura para corrigir o erro.
+  console.log('Nome:', pessoa.nome);
+  console.log('Idade:', pessoa.idade);
 
-04 - Faça um novo for/in, mas agora mostre todos os valores das chaves do objeto. Valor esperado no console:
+03 - Modifique a variável para que não ocorra Erro;
 
-Margarida
-Pato Donald
-Namorada do personagem principal nos quadrinhos do Pato Donald
-Sim
+Copie o código abaixo e rode-o para verificar sua saída:
 
-05 - Agora, defina um segundo objeto com a mesma estrutura (as mesmas chaves) do primeiro e os seguintes valores: ‘Tio Patinhas’, ‘Christmas on Bear Mountain, Dell’s Four Color Comics #178’, ‘O último MacPatinhas’, ‘Sim’. Então, imprima os valores de cada objeto juntos, de acordo com cada uma das chaves. Valor esperado no console:
+  const favoriteFood = 'Lasanha';
+  favoriteFood = 'Hamburguer';
+  console.log(favoriteFood);
 
-Margarida e Tio Patinhas
-Pato Donald e Christmas on Bear Mountain, Dell's Four Color Comics #178
-Namorada do personagem principal nos quadrinhos do Pato Donald e O último MacPatinhas
-Ambos recorrentes // Atenção para essa última linha!
+04 - Modifique as concatenações para template literals.
 
-# Leitura de objetos
+Copie o código abaixo:
 
-Usando o objeto abaixo, faça os exercícios a seguir:
+  const name = 'Adriana';
+  const lastName = 'Soares';
+  console.log('Olá' + ',' + name + ' ' + lastName + '!');
+  function soma(a,b) {
+    let resultado = a + b;
+    return resultado;
+  }
+  let a = 3;
+  let b = 5;
+  console.log('O resultado da soma de ' + a + ' + ' + b + ' é: ' + soma(a,b));
 
-let leitor = {
-  nome: 'Julia',
-  sobrenome: 'Pessoa',
-  idade: 21,
-  livrosFavoritos: [
-    {
-      titulo: 'O Pior Dia de Todos',
-      autor: 'Daniela Kopsch',
-      editora: 'Tordesilhas',
-    },
-  ],
-};
+🚀 Modifique a estrutura das funções a seguir para que elas sejam arrow functions;
 
-06 - Acesse as chaves nome, sobrenome e titulo, que está dentro da chave livrosFavoritos, e faça um console.log no seguinte formato: “O livro favorito de Julia Pessoa se chama ‘O Pior Dia de Todos’”.
+05 - Transforme a função numeroAleatorio em uma arrow function;
 
-07 - Adicione um novo livro favorito na chave livrosFavoritos, que é um array. Atribua a essa chave um objeto contendo as seguintes informações:
+Copie o código abaixo:
 
-{
-  titulo: 'Harry Potter e o Prisioneiro de Azkaban',
-  autor: 'JK Rowling',
-  editora: 'Rocco',
-}
+  function numeroAleatorio() {
+    return Math.random()
+  }
+  console.log(numeroAleatorio());
 
-08 - Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: “Julia tem <quantidade> livros favoritos”, onde “<quantidade>” é um número gerado automaticamente pelo seu código.
+  06 - Transforme a função hello em uma arrow function;
 
+Copie o código abaixo:
 
-## Exercícios - funções
+  function hello(nome) {
+    return `Olá, ${nome}!`
+  }
+  let nome = 'Ivan';
+  console.log(hello(nome));
 
-Agora vamos fazer um exercício que vai deixar nítido como funções com responsabilidades bem definidas deixam o código mais bem escrito.
+  07 - Transforme a função nomeCompleto em uma arrow function;
 
-A manipulação de arrays pode ser complexa em alguns momentos e, por isso, o JavaScript conta com diversos métodos para a sua manipulação. A documentação é sempre a nossa maior aliada. Se você tiver curiosidade de ler mais sobre esses métodos, clique aqui para acessar a documentação completa. Não se preocupe em entender todos os métodos, eles serão trabalhados cada vez com mais frequência durante o curso e, sempre que um método novo for necessário, ele será ensinado a você.
+Copie o código abaixo:
 
-Spoiler-alert: para os exercícios do dia, os métodos split, join e reverse podem ser muito úteis.
+  function nomeCompleto(nome, sobrenome) {
+    return `${nome} ${sobrenome}`
+  }
+  let nome = 'Ivan';
+  let sobrenome = 'Pires';
+  console.log(nomeCompleto(nome, sobrenome));
 
- 09- Crie uma função que receba uma string e retorne true se for um palíndromo, ou false, se não for.
+  08 - Altere a expressão if/else utilizando ternary operator;
 
-Exemplo de palíndromo: arara
-verificaPalindrome('arara')
-Retorno esperado: true
-verificaPalindrome('desenvolvimento')
-Retorno esperado: false
+Copie o código abaixo:
 
-10 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
-
-Array de teste: [2, 3, 6, 7, 10, 1];.
-Valor esperado no retorno da função: 4.
-
-11 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
-
-Array de teste: [2, 4, 6, 7, 10, 0, -3];.
-Valor esperado no retorno da função: 6.
-
-12 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
-
-Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];.
-Valor esperado no retorno da função: Fernanda.
-
-13 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
-
-Array de teste: [2, 3, 2, 5, 8, 2, 3];.
-Valor esperado no retorno da função: 2.
-
-14 - Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
-
-Valor de teste: N = 5.
-Valor esperado no retorno da função: 1+2+3+4+5 = 15.
-
-15 - Crie uma função que receba uma string word e outra string ending. Verifique se a string ending é o final da string word. Considere que a string ending sempre será menor que a string word.
-
-Valor de teste: 'trybe' e 'be'
-Valor esperado no retorno da função: true
-verificaFimPalavra('trybe', 'be');
-Retorno esperado: true
-verificaFimPalavra('joaofernando', 'fernan');
-Retorno esperado: false
+  let speed = 90;
+  const speedCar = (speed) => {
+    if (speed >= 120) {
+      return `Você ultrapassou o limite de velocidade`;
+    } else {
+      return `Você está na velocidade permitida`;
+    }
+  };
+  console.log(speedCar(speed));
 
 
-## Exercícios - Bônus
+# Parte II
 
-Os exercícios a seguir são mais desafiadores do que os anteriores, e te permitem utilizar vários conceitos adquiridos até o momento no curso para construir um código melhor estruturado como solução. Aproveite para treinar suas habilidades e testar coisas novas!
+Abaixo, você verá algumas especificações de algoritmos para desenvolver. É fundamental que você utilize o que aprendeu sobre let, const, arrow functions, template literals e ternary operator.
 
-# Exercício 1
+09 - Crie uma função que ligue e desligue um motor de um carro.
 
-(Bônus) Faça um programa que receba uma string em algarismos romanos e retorne o número que a string representa.
+Crie uma variável para armazenar o valor de status do seu motor (lembre-se de armazenar o tipo de variável da forma correta);
 
-Atenção! Esse exercício já apareceu no processo seletivo de uma grande multinacional!
+Crie a função ligarDesligar utilizando arrow functions. Ela não receberá nenhum parâmetro;
 
-Dicas:
+Crie a lógica para ligar e desligar o motor (a lógica deverá utilizar uma condicional para ligar e desligar o motor);
 
-Uma string é um array de caracteres, então cada elemento do array é uma letra.
-O valor de cada numeral romano é:
+Imprima no terminal “O motor está ligado“ e “O motor está desligado“ (lembre-se de utilizar o template literals nesse momento).
 
-| I   | 1    |
-| --- | ---- |
-| IV  | 4    |
-| V   | 5    |
-| IX  | 9    |
-| X   | 10   |
-| XL  | 40   |
-| L   | 50   |
-| XC  | 90   |
-| C   | 100  |
-| CD  | 400  |
-| D   | 500  |
-| CM  | 900  |
-| M   | 1000 |
+Bônus (opcional): tente fazer o mesmo exercício utilizando ternary operator.
 
-Que tal criar um objeto que associe cada letra a um numeral para fácil consulta?
+10 - Crie uma função que calcule a área de um círculo.
 
-Atenção! Quando você tem um número pequeno à direita de um número grande, eles devem ser somados. Exemplo: XI = 10 + 1 = 11. No entanto, se o número pequeno está à esquerda de um número maior que ele, ele deve ser subtraído. Exemplo: IX = 10 - 1 = 9.
+Na matemática, a fórmula para calcular a área de um círculo é: área = PI vezes o raio elevado ao quadrado.
 
-# Exercício 2
+Com base nessa informação:
 
-Crie uma função chamada arrayOfNumbers que receberá a variável vector como parâmetro.
+Crie a função circleArea, que recebe o valor do raio como parâmetro, utilizando arrow functions;
 
-Através de um loop for, percorra essa variável, busque os números pares e os adicione a um novo array, que deverá ser retornado ao final pela função.
+Crie uma variável para armazenar o valor de PI (lembre-se de armazenar o tipo de variável da forma correta);
 
-let vector = [[1, 2], [3,4,5,6], [7,8,9,10]];
+Crie a lógica para retornar a área do círculo;
 
-# Exercício 3
+Imprima no terminal “Essa é a área do círculo: resultado da função“ (lembre-se de utilizar o template literals nesse momento).
 
-A partir do array de frutas basket, retorne um objeto que contenha o nome da fruta como chave e a quantidade de vezes que ela aparece no array como valor. Por exemplo, o array [‘Melancia’, ‘Abacate’, ‘Melancia’, ‘Melancia’, ‘Uva’], deverá retornar { Melancia: 3, Abacate: 1, Uva: 1 } quando passado como argumento para a função.
+Exemplo de retorno:
 
-Em seguida, imprima esse resultado na tela com uma mensagem no seguinte formato: Sua cesta possui: x Melancias, x Abacates...
+Parâmetro: 3
 
-const basket = [
-  'Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva', 'Laranja',
-  'Jaca', 'Pera', 'Melancia', 'Uva', 'Laranja', 'Melancia',
-  'Banana', 'Uva', 'Pera', 'Abacate', 'Laranja', 'Abacate',
-  'Banana', 'Melancia', 'Laranja', 'Laranja', 'Jaca', 'Uva',
-  'Banana', 'Uva', 'Laranja', 'Pera', 'Melancia', 'Uva',
-  'Jaca', 'Banana', 'Pera', 'Abacate', 'Melancia', 'Melancia',
-  'Laranja', 'Pera', 'Banana', 'Jaca', 'Laranja', 'Melancia',
-  'Abacate', 'Abacate', 'Pera', 'Melancia', 'Banana', 'Banana',
-  'Abacate', 'Uva', 'Laranja', 'Banana', 'Abacate', 'Uva',
-  'Uva', 'Abacate', 'Abacate', 'Melancia', 'Uva', 'Jaca',
-  'Uva', 'Banana', 'Abacate', 'Banana', 'Uva', 'Banana',
-  'Laranja', 'Laranja', 'Jaca', 'Jaca', 'Abacate', 'Jaca',
-  'Laranja', 'Melancia', 'Pera', 'Jaca', 'Melancia', 'Uva',
-  'Abacate', 'Jaca', 'Jaca', 'Abacate', 'Uva', 'Laranja',
-  'Pera', 'Melancia', 'Jaca', 'Pera', 'Laranja', 'Jaca',
-  'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
-  'Banana', 'Pera', 'Abacate', 'Uva',
-];
+Retorno: Essa é a área do círculo: 28.259999999999998
 
-# Exercício 4
+Parâmetro: 5
 
-Usando o objeto abaixo, faça o que for pedido a seguir:
+Retorno: Essa é a área do círculo: 78.5
 
-let moradores = {
-  blocoUm: [
-    {
-      nome: 'Luiza',
-      sobrenome: 'Guimarães',
-      andar: 10,
-      apartamento: 1005,
-    },
-    {
-      nome: 'William',
-      sobrenome: 'Albuquerque',
-      andar: 5,
-      apartamento: 502,
-    },
-  ],
-  blocoDois: [
-    {
-      nome: 'Murilo',
-      sobrenome: 'Ferraz',
-      andar: 8,
-      apartamento: 804,
-    },
-    {
-      nome: 'Zoey',
-      sobrenome: 'Brooks',
-      andar: 1,
-      apartamento: 101,
-    },
-  ],
-};
+11 - Crie uma função que receba uma frase como parâmetro e retorne a maior palavra da frase.
 
-Acesse as chaves nome, sobrenome, andar e apartamento do último morador do blocoDois e faça um console.log no seguinte formato: “O morador do bloco 2 de nome Zoey Brooks mora no 1° andar, apartamento 101”.
+Exemplo:
 
-Utilize o for para imprimir o nome completo de todos os moradores do bloco 1, acessando suas chaves nome e sobrenome. Depois faça o mesmo para os moradores do bloco 2.
+  longestWord('Antônio foi no banheiro e não sabemos o que aconteceu') // retorna 'aconteceu'
+
+  De olho na dica 👀: Nesse exercício, será necessário utilizar os conhecimentos sobre array, método split e loop for/of.
+
+Bônus (opcional): Tente fazer o mesmo exercício utilizando o método array.sort().
+
+
+## Exercícios Bônus 
+
+Crie duas funções JavaScript com as seguintes especificações:
+
+Não se esqueça de usar template literals
+
+Função 1: Escreva uma função que substitua a letra ‘x’ em uma frase.
+
+O nome da função deverá ser substituaX;
+
+A função deverá receber um nome por parâmetro;
+
+Declare dentro da função uma variável do tipo const, com o nome frase, atribuindo o valor 'Tryber x aqui!';
+
+A função deverá retornar uma nova frase em que o x da frase 'Tryber x aqui!' seja substituído pelo nome passado por parâmetro.
+
+Exemplo:
+
+Parâmetro: ‘Bebeto’
+Retorno: ‘Tryber Bebeto aqui!’
+Spoiler: O método split() pode ser utilizado de diferentes maneiras, como para separar as palavras de um texto.
+
+Função 2: Escreva uma função que irá receber o retorno da Função 1 por parâmetro e retornará uma nova string.
+
+O nome da função deverá ser minhasSkills;
+
+A função deverá receber o retorno da Função 1 - substituaX por parâmetro;
+
+Declare dentro da função uma variável com o nome skills, do tipo const;
+
+A variável skills deverá ser um array contendo três strings com tecnologias que você já aprendeu.
+Crie uma varável do tipo let e concatene o valor retornado da Função 1 - substituaX (utilize template literals), a frase 'Minhas três principais habilidades são:' e o valor da variável skills.
+
+Exemplo de retorno:
+
+Tryber Bebeto aqui!
+
+Minhas três principais habilidades são:
+
+JavaScript
+HTML
+CSS
