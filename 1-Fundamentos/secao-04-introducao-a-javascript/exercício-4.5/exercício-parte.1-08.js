@@ -1,4 +1,4 @@
-let speed = 90;
+
 let speed = 90;
   const speedCar = (speed) => (
     speed >= 120 ? `Você ultrapassou o limite de velocidade` : `Você está na velocidade permitida`
