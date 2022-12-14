@@ -42,7 +42,44 @@
       </section>
     </main>
     <script>
-      // Seu código aqui
+        function changeText() {
+            let paragraph = document.getElementsByTagName('p')[1];
+            paragraph.innerText = 'Me vejo trabalhando em uma empresa legal, com a carreira consolidada e estudando pra sempre estar atualizada.';
+        };
+        changeText();
+
+        function changeSquareColor() {
+            let squareYeloow = document.getElementsByClassName('main-content')[0];
+            squareYeloow.style.background = 'rgb(76, 164, 109)';
+        }
+        changeSquareColor();
+      
+        function changeSquareToWhite() {
+            let squareRed = document.getElementsByClassName('center-content')[0];
+            squareRed.style.background = 'white';
+        }
+        changeSquareToWhite();
+
+        function correctTheText() {
+            let title = document.getElementsByTagName('h1')[0];
+            title.innerText = 'Desafio - JavaScript';
+        }
+        correctTheText();
+
+        function modifyText() {
+            let paragraph = document.getElementsByTagName('p')[0];
+            paragraph.innerText = paragraph.innerHTML.toUpperCase();
+        }
+        modifyText();
+
+        function showParagraphs() {
+            let paragraphs = document.getElementsByTagName('p');
+            for (let index = 0; index < paragraphs.length; index += 1) {
+                console.log(paragraphs[index].innerHTML);
+                
+            }
+        }
+        showParagraphs();
     </script>
   </body>
 </html>
