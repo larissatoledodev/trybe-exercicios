@@ -99,8 +99,8 @@ Interessante quantas possibilidades para manipular o posicionamento de elementos
 </html>
 
 
-  * Utilizando o código abaixo, teste as possibilidades (center, flex-start, flex-end, stretch, space-around e space-between) para a 
-    propriedade align-content.
+  * Utilizando o código abaixo, teste as possibilidades (center, flex-start, flex-end, stretch e baseline) para a propriedade 
+    align-items. Não se esqueça de copiar o código abaixo! 😉
 
   
 <!DOCTYPE html>
