@@ -607,3 +607,22 @@ Realize as seguintes tarefas:
   * O elemento com id header deve ser fixo, de forma que ele fique aparecendo sempre no topo da tela, mesmo após a pessoa usuária rolar a página.
 
 
+# Exercício Bônus - 
+
+O vídeo abaixo mostra como você pode criar layouts responsivos utilizando o framework Bootstrap.
+
+Use-o como referência para realizar o exercício bônus proposto a seguir.
+
+  ** https://www.youtube.com/watch?v=n2tuBD2bwIw
+
+Agora que você já está fera em criar layouts específicos para diferentes tamanhos de tela utilizando a abordagem mobile first, que tal voltar à pagina que você criou na aula de HTML Semântico sobre o camarão louva deus e criar um layout bem bacana para ela ser acessada a partir de telas menores? 🦐🦗🥊
+
+Sugestão:
+
+  * Crie um layout específico para telas pequenas (smartphones); 📱
+
+  * Crie um layout específico para telas médias (tablets); 📱
+
+  * Crie um layout específico para impressão (impressoras, salvar como PDF, etc). 🖨
+
+Dica: o Bootstrap não tem uma classe específica para o tipo de media print. Você deve definir a media query no seu arquivo CSS e estilizar conforme achar melhor! 😉
