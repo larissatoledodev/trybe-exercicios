@@ -1,3 +1,9 @@
+@media (min-width: 500px) {
+  .card:nth-of-type(1) {
+    display: block;
+  }
+}
+
 body {
   align-items: center;
   color: #525252;
