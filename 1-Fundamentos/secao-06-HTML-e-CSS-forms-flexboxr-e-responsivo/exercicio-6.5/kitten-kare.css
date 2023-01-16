@@ -1,3 +1,62 @@
+@media print {
+  #header,
+  #navigation,
+  #footer {
+    display: none;
+  }
+
+  #content {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  #aside {
+    display: flex;
+    flex-direction: column;
+    page-break-inside: avoid;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    padding: 0px;
+  }
+
+  #header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 35px;
+  }
+
+  #navigation {
+    margin-top: 75px;
+  }
+
+  #content-container {
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #content {
+    width: 80%;
+    text-align: justify;
+  }
+
+  #aside {
+    margin: 20px;
+    align-self: flex-start;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+
 body {
   margin: 0;
 }
